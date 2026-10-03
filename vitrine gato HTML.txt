@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gato — Boulangerie de quartier (site de démonstration)</title>
+  <meta name="description" content="Gato, boulangerie de quartier familiale : pains, viennoiseries, pâtisseries et sandwichs. Site vitrine de démonstration, tous les contenus sont fictifs.">
+  <meta name="theme-color" content="#fbf3e4">
+  <link rel="stylesheet" href="style.css">
+  <!-- Active les styles dépendant de JavaScript (menu mobile, apparition au défilement) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <div class="demo-banner" role="note">Site de démonstration : tous les contenus (adresse, horaires, prix, histoire) sont fictifs.</div>
+
+  <!-- ======================= 1. EN-TÊTE ET NAVIGATION ======================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#accueil" aria-label="Gato, retour à l'accueil">Gato<span class="logo-dot" aria-hidden="true"></span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li><a class="nav-link" href="#histoire">Histoire</a></li>
+          <li><a class="nav-link" href="#produits">Produits</a></li>
+          <li><a class="nav-link" href="#reservation">Réservation</a></li>
+          <li><a class="nav-link" href="#horaires">Horaires</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary btn-small nav-cta" href="#reservation">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ============================ 2. ACCUEIL ============================ -->
+    <section class="hero" id="accueil" aria-labelledby="titre-accueil">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="hero-tagline">Boulangerie de quartier, esprit de famille</p>
+          <h1 id="titre-accueil">Gato, le goût des bonnes choses et la chaleur du quartier.</h1>
+          <p class="hero-text">Chez Gato, on aime les belles tablées, les matins qui sentent bon le pain et les petites pauses sucrées. Pousser la porte, c'est trouver un accueil simple, des produits soignés et le plaisir de partager.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="#produits">Découvrir nos produits</a>
+            <a class="btn btn-secondary" href="#reservation">Réserver</a>
+          </div>
+        </div>
+
+        <!-- Illustration vectorielle intégrée (aucune image externe à charger).
+             Pour une vraie photo : remplacer ce <svg> par <img src="photo.jpg" alt="..." width="480" height="400"> -->
+        <div class="hero-visual reveal">
+          <svg viewBox="0 0 480 400" role="img" aria-labelledby="hero-svg-titre">
+            <title id="hero-svg-titre">Illustration d'une planche en bois avec des baguettes, un pain rond et un croissant</title>
+            <circle cx="240" cy="200" r="185" fill="#f6dcae"/>
+            <!-- planche -->
+            <rect x="45" y="300" width="390" height="34" rx="17" fill="#6b4a36"/>
+            <rect x="45" y="300" width="390" height="10" rx="5" fill="#82604a"/>
+            <!-- baguettes -->
+            <g transform="rotate(-20 240 200)">
+              <rect x="80" y="140" width="320" height="48" rx="24" fill="#d9963f"/>
+              <path d="M125 150l22 28M185 150l22 28M245 150l22 28M305 150l22 28" stroke="#f7d9a0" stroke-width="8" stroke-linecap="round"/>
+            </g>
+            <g transform="rotate(-8 240 230)">
+              <rect x="95" y="205" width="300" height="46" rx="23" fill="#c98332"/>
+              <path d="M140 214l20 27M198 214l20 27M256 214l20 27M314 214l20 27" stroke="#efc986" stroke-width="8" stroke-linecap="round"/>
+            </g>
+            <!-- pain rond -->
+            <ellipse cx="150" cy="282" rx="88" ry="52" fill="#b9741f"/>
+            <ellipse cx="150" cy="272" rx="80" ry="42" fill="#d28d36"/>
+            <path d="M105 262q45-26 90 0M112 284q38-20 76 0" stroke="#f3cf8d" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <!-- croissant -->
+            <g transform="translate(330 262) rotate(-12)">
+              <ellipse cx="0" cy="0" rx="82" ry="38" fill="#e4a14a"/>
+              <ellipse cx="-52" cy="8" rx="30" ry="26" fill="#d28d36"/>
+              <ellipse cx="52" cy="8" rx="30" ry="26" fill="#d28d36"/>
+              <ellipse cx="-22" cy="-2" rx="22" ry="34" fill="#efb35c"/>
+              <ellipse cx="22" cy="-2" rx="22" ry="34" fill="#efb35c"/>
+              <path d="M-20 -30q-6 30 0 60M20 -30q6 30 0 60" stroke="#c07b27" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. HISTOIRE ============================ -->
+    <section class="section section-alt" id="histoire" aria-labelledby="titre-histoire">
+      <div class="container history-grid">
+        <div class="history-visual reveal">
+          <svg viewBox="0 0 400 340" role="img" aria-labelledby="histoire-svg-titre">
+            <title id="histoire-svg-titre">Illustration d'une devanture de boulangerie avec un store rayé orange et crème</title>
+            <rect x="30" y="110" width="340" height="200" rx="8" fill="#fffaf0"/>
+            <rect x="30" y="296" width="340" height="14" fill="#6b4a36"/>
+            <!-- store rayé -->
+            <path d="M20 110h360l-14-70H34z" fill="#fbf3e4"/>
+            <path d="M34 40h40l-8 70H20zM114 40h40l-4 70h-44zM194 40h40v70h-40zM274 40h40l4 70h-44zM354 40h12l14 70h-46z" fill="#c2570f"/>
+            <path d="M20 110q20 22 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="#c2570f" opacity="0"/>
+            <!-- enseigne -->
+            <rect x="130" y="124" width="140" height="44" rx="10" fill="#3e2415"/>
+            <text x="200" y="156" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#fbf3e4">Gato</text>
+            <!-- porte et vitrine -->
+            <rect x="60" y="186" width="90" height="110" rx="6" fill="#f3e3c3" stroke="#6b4a36" stroke-width="4"/>
+            <ellipse cx="105" cy="268" rx="26" ry="14" fill="#d28d36"/>
+            <ellipse cx="90" cy="248" rx="20" ry="10" fill="#e4a14a"/>
+            <rect x="180" y="186" width="70" height="110" rx="6" fill="#6b4a36"/>
+            <circle cx="238" cy="244" r="5" fill="#f2a65a"/>
+            <rect x="272" y="186" width="68" height="110" rx="6" fill="#f3e3c3" stroke="#6b4a36" stroke-width="4"/>
+            <rect x="282" y="258" width="48" height="18" rx="9" fill="#d9963f"/>
+            <rect x="286" y="232" width="40" height="18" rx="9" fill="#c98332"/>
+          </svg>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Notre histoire</span>
+          <h2 id="titre-histoire">Une maison pensée pour le quartier</h2>
+          <p>Gato est née d'une envie simple : offrir aux habitants du quartier un lieu chaleureux où l'on passe prendre son pain du matin, et où l'on s'attarde un peu pour le plaisir.</p>
+          <p>Ici, chaque produit est préparé et présenté avec attention, qu'il s'agisse d'une baguette pour le déjeuner, d'une viennoiserie du dimanche ou d'une pâtisserie pour fêter un moment à plusieurs.</p>
+          <p>Nous aimons le contact avec chacun de nos clients : un conseil, un sourire, une habitude qui s'installe. Notre ambition est d'avoir un produit pour chaque moment de la journée.</p>
+          <ul class="values">
+            <li><div><strong>L'accueil</strong><span>Un comptoir où l'on prend le temps de se parler.</span></div></li>
+            <li><div><strong>Le savoir-faire</strong><span>Du soin dans la préparation et la présentation.</span></div></li>
+            <li><div><strong>Le partage</strong><span>Des produits pensés pour être savourés ensemble.</span></div></li>
+          </ul>
+          <p class="fictif-note">Histoire fictive, rédigée pour cette démonstration. Aucune date, personne ni récompense réelle n'est mentionnée.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. PRODUITS ============================ -->
+    <section class="section" id="produits" aria-labelledby="titre-produits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nos produits</span>
+          <h2 id="titre-produits">De quoi gâter toute la famille</h2>
+          <p>Quatre univers pour accompagner chaque moment de la journée. Les produits et les prix ci-dessous sont des exemples fictifs.</p>
+        </div>
+
+        <div class="products-grid">
+
+          <article class="card product-card reveal">
+            <div class="product-media">
+              <svg viewBox="0 0 220 140" role="img" aria-label="Illustration d'une baguette et d'un pain rond">
+                <g transform="rotate(-14 110 70)">
+                  <rect x="20" y="42" width="180" height="30" rx="15" fill="#d9963f"/>
+                  <path d="M50 49l14 16M88 49l14 16M126 49l14 16M164 49l14 16" stroke="#f7d9a0" stroke-width="6" stroke-linecap="round"/>
+                </g>
+                <ellipse cx="85" cy="108" rx="55" ry="26" fill="#b9741f"/>
+                <ellipse cx="85" cy="102" rx="50" ry="21" fill="#d28d36"/>
+                <path d="M58 98q27-14 54 0" stroke="#f3cf8d" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="170" cy="108" rx="32" ry="20" fill="#c98332"/>
+                <path d="M152 106q18-9 36 0" stroke="#efc986" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Pains</h3>
+              <p>Les indispensables du quotidien, à partager à table.</p>
+              <ul class="product-list">
+                <li><span>Baguette</span><span class="price">1,20 €</span></li>
+                <li><span>Pain de campagne</span><span class="price">3,80 €</span></li>
+                <li><span>Pain aux céréales</span><span class="price">4,20 €</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card product-card reveal">
+            <div class="product-media">
+              <svg viewBox="0 0 220 140" role="img" aria-label="Illustration d'un croissant et d'un pain au chocolat">
+                <g transform="translate(80 70) rotate(-10)">
+                  <ellipse cx="0" cy="0" rx="62" ry="30" fill="#e4a14a"/>
+                  <ellipse cx="-40" cy="6" rx="22" ry="20" fill="#d28d36"/>
+                  <ellipse cx="40" cy="6" rx="22" ry="20" fill="#d28d36"/>
+                  <ellipse cx="-16" cy="-2" rx="16" ry="26" fill="#efb35c"/>
+                  <ellipse cx="16" cy="-2" rx="16" ry="26" fill="#efb35c"/>
+                </g>
+                <rect x="128" y="76" width="76" height="40" rx="14" fill="#d9963f"/>
+                <rect x="128" y="92" width="76" height="8" fill="#5a3320"/>
+                <path d="M146 78v36M166 78v36M186 78v36" stroke="#b9741f" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Viennoiseries</h3>
+              <p>Dorées et fondantes, pour les petits-déjeuners et les goûters.</p>
+              <ul class="product-list">
+                <li><span>Croissant</span><span class="price">1,30 €</span></li>
+                <li><span>Pain au chocolat</span><span class="price">1,50 €</span></li>
+                <li><span>Brioche</span><span class="price">2,60 €</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card product-card reveal">
+            <div class="product-media">
+              <svg viewBox="0 0 220 140" role="img" aria-label="Illustration d'un éclair au chocolat et d'une tartelette aux fruits">
+                <rect x="20" y="40" width="110" height="38" rx="19" fill="#e4b568"/>
+                <path d="M26 52q10-10 22 0t22 0 22 0 22 0 12 4v8q-6 4-12 0t-22 0-22 0-22 0-22 0-6-4z" fill="#5a3320"/>
+                <rect x="20" y="40" width="110" height="38" rx="19" fill="none" stroke="#c98332" stroke-width="3"/>
+                <path d="M120 112l12-34h60l12 34z" fill="#e4b568" transform="translate(-24 0)"/>
+                <ellipse cx="144" cy="78" rx="42" ry="12" fill="#f6e3b8"/>
+                <circle cx="130" cy="72" r="8" fill="#c2570f"/>
+                <circle cx="150" cy="70" r="8" fill="#a3200f"/>
+                <circle cx="164" cy="76" r="7" fill="#c2570f"/>
+                <rect x="108" y="112" width="86" height="8" rx="4" fill="#c98332"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Pâtisseries</h3>
+              <p>Des douceurs à déguster sur place ou à offrir.</p>
+              <ul class="product-list">
+                <li><span>Tarte aux fruits (part)</span><span class="price">3,50 €</span></li>
+                <li><span>Éclair au chocolat</span><span class="price">3,20 €</span></li>
+                <li><span>Tartelette</span><span class="price">3,40 €</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card product-card reveal">
+            <div class="product-media">
+              <svg viewBox="0 0 220 140" role="img" aria-label="Illustration d'un sandwich garni">
+                <path d="M30 62q0-34 80-34t80 34z" fill="#d9963f"/>
+                <path d="M62 44l8 8M100 38l8 8M138 44l8 8" stroke="#f7d9a0" stroke-width="5" stroke-linecap="round"/>
+                <path d="M26 64q14 12 28 0t28 0 28 0 28 0 28 0 28 0v8H26z" fill="#6aa04a"/>
+                <rect x="30" y="72" width="160" height="10" rx="3" fill="#e7a8a0"/>
+                <rect x="30" y="82" width="160" height="8" rx="3" fill="#f2cf6a"/>
+                <path d="M26 92h168v8q0 20-40 20H66q-40 0-40-20z" fill="#d9963f"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Sandwichs</h3>
+              <p>Pour une pause déjeuner simple et gourmande.</p>
+              <ul class="product-list">
+                <li><span>Jambon-fromage</span><span class="price">4,90 €</span></li>
+                <li><span>Végétarien</span><span class="price">5,20 €</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="fictif-note products-note">Produits et prix de démonstration, sans valeur commerciale. La disponibilité, la fabrication sur place et la composition ne sont pas définies.</p>
+      </div>
+    </section>
+
+    <!-- ========================== 5. RÉSERVATION ========================== -->
+    <section class="section section-alt" id="reservation" aria-labelledby="titre-reservation">
+      <div class="container reservation-grid">
+
+        <div class="reveal">
+          <span class="eyebrow">Réservation</span>
+          <h2 id="titre-reservation">Préparer une demande de réservation</h2>
+          <p>Indiquez ce que vous souhaitez retirer en boutique : le formulaire prépare un e-mail que vous pourrez envoyer vous-même.</p>
+          <div class="limits-box">
+            <strong>Ce qu'il faut savoir (démonstration)</strong>
+            <ul>
+              <li>Ce site n'a ni serveur ni base de données : <strong>aucune demande n'est transmise automatiquement</strong>.</li>
+              <li>L'adresse e-mail de destination est fictive et non opérationnelle.</li>
+              <li>Une demande n'est ni garantie, ni acceptée automatiquement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card form-card reveal">
+          <form id="form-reservation" novalidate aria-describedby="form-intro">
+            <p id="form-intro" class="form-hint">Les champs marqués <span class="required-mark" aria-hidden="true">*</span><span class="visually-hidden">d'une étoile</span> sont obligatoires. Vos données restent dans votre navigateur et ne sont pas enregistrées.</p>
+
+            <div class="form-field">
+              <label for="nom">Nom et prénom <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required aria-describedby="err-nom">
+              <span class="field-error" id="err-nom"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="telephone">Téléphone <span class="required-mark" aria-hidden="true">*</span></label>
+                <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" required aria-describedby="err-telephone">
+                <span class="field-error" id="err-telephone"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">E-mail <span class="optional-mark">(facultatif)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" aria-describedby="err-email">
+                <span class="field-error" id="err-email"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="date">Date souhaitée <span class="required-mark" aria-hidden="true">*</span></label>
+                <input type="date" id="date" name="date" required aria-describedby="err-date">
+                <span class="field-error" id="err-date"></span>
+              </div>
+              <div class="form-field">
+                <label for="heure">Heure de retrait <span class="required-mark" aria-hidden="true">*</span></label>
+                <input type="time" id="heure" name="heure" step="900" required aria-describedby="err-heure">
+                <span class="field-error" id="err-heure"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="produit">Produit ou commande <span class="required-mark" aria-hidden="true">*</span></label>
+                <input type="text" id="produit" name="produit" placeholder="Ex. : 2 baguettes, 1 tarte aux fruits" required aria-describedby="err-produit">
+                <span class="field-error" id="err-produit"></span>
+              </div>
+              <div class="form-field">
+                <label for="quantite">Quantité <span class="optional-mark">(facultatif)</span></label>
+                <input type="number" id="quantite" name="quantite" min="1" max="50" inputmode="numeric" aria-describedby="err-quantite">
+                <span class="field-error" id="err-quantite"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span class="optional-mark">(facultatif)</span></label>
+              <textarea id="message" name="message" maxlength="500"></textarea>
+            </div>
+
+            <div class="form-field">
+              <div class="check-field">
+                <input type="checkbox" id="consentement" name="consentement" required aria-describedby="err-consentement">
+                <label for="consentement">J'accepte que ces informations servent uniquement à rédiger ma demande de réservation dans mon application e-mail. <span class="required-mark" aria-hidden="true">*</span></label>
+              </div>
+              <span class="field-error" id="err-consentement"></span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Préparer ma demande</button>
+            </div>
+
+            <div id="erreur-globale" class="notice notice-error" role="alert" hidden></div>
+          </form>
+
+          <div id="reservation-resultat" class="notice" role="status" tabindex="-1" hidden>
+            <h3>Votre demande n'a pas été envoyée</h3>
+            <p>Voici le brouillon prêt à l'emploi. Rien n'a été transmis à la boulangerie : l'adresse de destination est fictive et ne fonctionne pas.</p>
+            <dl class="recap" id="recap"></dl>
+            <a class="btn btn-secondary btn-small" id="lien-mailto" href="#reservation">Ouvrir mon application e-mail</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 6. HORAIRES ============================ -->
+    <section class="section" id="horaires" aria-labelledby="titre-horaires">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Horaires</span>
+          <h2 id="titre-horaires">Quand nous trouver</h2>
+        </div>
+        <div class="hours-wrap reveal">
+          <!-- Horaires fictifs. Si vous les modifiez, mettez aussi à jour la table HORAIRES dans le script. -->
+          <table class="hours-table">
+            <caption>Horaires d'ouverture fictifs, donnés à titre d'exemple.</caption>
+            <thead>
+              <tr><th scope="col">Jour</th><th scope="col">Horaires</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Lundi</th><td class="closed">Fermé</td></tr>
+              <tr><th scope="row">Mardi</th><td>7h00 – 19h00</td></tr>
+              <tr><th scope="row">Mercredi</th><td>7h00 – 19h00</td></tr>
+              <tr><th scope="row">Jeudi</th><td>7h00 – 19h00</td></tr>
+              <tr><th scope="row">Vendredi</th><td>7h00 – 19h00</td></tr>
+              <tr><th scope="row">Samedi</th><td>7h00 – 19h30</td></tr>
+              <tr><th scope="row">Dimanche</th><td>7h30 – 13h00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 7. CONTACT ============================= -->
+    <section class="section section-alt" id="contact" aria-labelledby="titre-contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 id="titre-contact">Passez nous voir</h2>
+          <p>Les coordonnées ci-dessous sont fictives et ne correspondent à aucun établissement réel.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card reveal">
+            <ul class="contact-list">
+              <li><strong>Adresse <span class="badge-fictif">fictive</span></strong>12 rue des Fournils<br>00000 Ville-Exemple</li>
+              <li><strong>Téléphone <span class="badge-fictif">fictif, non opérationnel</span></strong>01 23 45 67 89</li>
+              <li><strong>E-mail <span class="badge-fictif">fictif, non opérationnel</span></strong>reservation@gato-demo.invalid</li>
+              <li><strong>Horaires</strong><a href="#horaires">Consulter les horaires d'ouverture</a></li>
+            </ul>
+            <a class="btn btn-primary" href="#reservation">Préparer une réservation</a>
+          </div>
+
+          <div class="map-block reveal">
+            <h3>Plan non disponible</h3>
+            <p>L'adresse étant fictive, aucune carte n'est affichée afin de ne désigner aucun lieu réel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ 8. PIED DE PAGE ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#accueil" aria-label="Gato, retour à l'accueil">Gato<span class="logo-dot" aria-hidden="true"></span></a>
+          <p>Boulangerie de quartier familiale : le goût des bonnes choses, la chaleur en plus.</p>
+        </div>
+        <div>
+          <h2>Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#reservation">Réservation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Pratique</h2>
+          <ul class="footer-links">
+            <li><a href="#horaires">Horaires</a></li>
+            <li><a href="#contact">Coordonnées (fictives)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom"><strong>Site de démonstration fictif.</strong> Gato est une boulangerie imaginaire créée pour un portfolio : les produits, prix, horaires et coordonnées ne sont pas réels. Aucune mention légale n'est fournie car aucune entreprise n'existe.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Menu mobile ---------- */
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu-principal');
+      function setMenu(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        menu.classList.toggle('is-open', open);
+      }
+      toggle.addEventListener('click', function () {
+        setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) { setMenu(false); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      /* ---------- Apparition discrète + lien actif (si IntersectionObserver existe) ---------- */
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var revealObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('is-visible'); revealObs.unobserve(en.target); }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { revealObs.observe(el); });
+
+        var links = document.querySelectorAll('.nav-link');
+        var secObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) {
+              links.forEach(function (l) {
+                if (l.getAttribute('href') === '#' + en.target.id) { l.setAttribute('aria-current', 'true'); }
+                else { l.removeAttribute('aria-current'); }
+              });
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        document.querySelectorAll('main section[id]').forEach(function (s) { secObs.observe(s); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      /* ---------- Formulaire de réservation (mode brouillon, aucun envoi) ---------- */
+      var form = document.getElementById('form-reservation');
+      var resultat = document.getElementById('reservation-resultat');
+      var erreurGlobale = document.getElementById('erreur-globale');
+      var DESTINATAIRE = 'reservation@gato-demo.invalid'; // adresse FICTIVE, non opérationnelle
+
+      // Horaires fictifs en minutes depuis minuit, par jour (0 = dimanche). null = fermé.
+      // À garder cohérent avec le tableau de la section Horaires.
+      var HORAIRES = {
+        0: [450, 780], 1: null, 2: [420, 1140], 3: [420, 1140],
+        4: [420, 1140], 5: [420, 1140], 6: [420, 1170]
+      };
+      var JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function hhmm(min) { return pad(Math.floor(min / 60)) + 'h' + pad(min % 60); }
+      function aujourdhui() {
+        var d = new Date();
+        return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+      }
+      function jourDe(iso) {
+        var p = iso.split('-');
+        return new Date(+p[0], +p[1] - 1, +p[2]).getDay();
+      }
+
+      var dateInput = document.getElementById('date');
+      dateInput.min = aujourdhui();
+
+      function val(id) { return document.getElementById(id).value.trim(); }
+
+      // Chaque règle renvoie un message d'erreur, ou '' si le champ est valide.
+      var regles = {
+        nom: function () {
+          var v = val('nom');
+          if (!v) { return 'Indiquez votre nom et prénom.'; }
+          if (v.length < 3) { return 'Le nom semble trop court.'; }
+          return '';
+        },
+        telephone: function () {
+          var v = val('telephone');
+          if (!v) { return 'Indiquez un numéro de téléphone.'; }
+          if (!/^(?:(?:\+|00)33|0)\s?[1-9](?:[\s.\-]?\d{2}){4}$/.test(v)) {
+            return 'Numéro invalide. Exemple : 06 12 34 56 78.';
+          }
+          return '';
+        },
+        email: function () {
+          var v = val('email');
+          if (v && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { return 'Adresse e-mail invalide. Exemple : nom@exemple.fr.'; }
+          return '';
+        },
+        date: function () {
+          var v = val('date');
+          if (!v) { return 'Choisissez une date.'; }
+          if (v < aujourdhui()) { return 'La date ne peut pas être dans le passé.'; }
+          if (!HORAIRES[jourDe(v)]) { return 'La boulangerie est fermée ce jour-là (' + JOURS[jourDe(v)] + '). Choisissez une autre date.'; }
+          return '';
+        },
+        heure: function () {
+          var v = val('heure');
+          if (!v) { return 'Choisissez une heure de retrait.'; }
+          var d = val('date');
+          if (d && HORAIRES[jourDe(d)]) {
+            var h = HORAIRES[jourDe(d)];
+            var p = v.split(':');
+            var min = +p[0] * 60 + +p[1];
+            if (min < h[0] || min > h[1] - 15) {
+              return 'Ce jour-là, le retrait est possible de ' + hhmm(h[0]) + ' à ' + hhmm(h[1] - 15) + '.';
+            }
+          }
+          return '';
+        },
+        produit: function () {
+          return val('produit') ? '' : 'Indiquez le produit ou la commande souhaitée.';
+        },
+        quantite: function () {
+          var v = val('quantite');
+          if (!v) { return ''; }
+          var n = Number(v);
+          if (!Number.isInteger(n) || n < 1 || n > 50) { return 'Indiquez une quantité entière entre 1 et 50.'; }
+          return '';
+        },
+        consentement: function () {
+          return document.getElementById('consentement').checked ? '' : 'Cochez la case pour continuer.';
+        }
+      };
+      var ordre = ['nom', 'telephone', 'email', 'date', 'heure', 'produit', 'quantite', 'consentement'];
+
+      function afficherErreur(id, msg) {
+        var champ = document.getElementById(id);
+        var zone = document.getElementById('err-' + id);
+        zone.textContent = msg;
+        if (msg) { champ.setAttribute('aria-invalid', 'true'); }
+        else { champ.removeAttribute('aria-invalid'); }
+      }
+
+      // Efface l'erreur d'un champ dès que l'utilisateur le corrige ; revalide l'heure si la date change.
+      ordre.forEach(function (id) {
+        var champ = document.getElementById(id);
+        var evt = (champ.type === 'checkbox') ? 'change' : 'input';
+        champ.addEventListener(evt, function () {
+          if (champ.getAttribute('aria-invalid') === 'true') { afficherErreur(id, regles[id]()); }
+        });
+      });
+      dateInput.addEventListener('change', function () {
+        if (document.getElementById('heure').getAttribute('aria-invalid') === 'true') {
+          afficherErreur('heure', regles.heure());
+        }
+      });
+
+      function formaterDate(iso) {
+        var p = iso.split('-');
+        return JOURS[jourDe(iso)] + ' ' + p[2] + '/' + p[1] + '/' + p[0];
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        resultat.hidden = true;
+        var premiere = null;
+        var nbErreurs = 0;
+
+        ordre.forEach(function (id) {
+          var msg = regles[id]();
+          afficherErreur(id, msg);
+          if (msg) { nbErreurs++; if (!premiere) { premiere = id; } }
+        });
+
+        if (nbErreurs) {
+          erreurGlobale.textContent = nbErreurs === 1
+            ? 'Un champ est à corriger avant de continuer.'
+            : nbErreurs + ' champs sont à corriger avant de continuer.';
+          erreurGlobale.hidden = false;
+          document.getElementById(premiere).focus(); // les valeurs saisies sont conservées
+          return;
+        }
+        erreurGlobale.hidden = true;
+
+        var lignes = [
+          ['Nom', val('nom')],
+          ['Téléphone', val('telephone')],
+          ['E-mail', val('email') || 'non renseigné'],
+          ['Date souhaitée', formaterDate(val('date'))],
+          ['Heure de retrait', val('heure').replace(':', 'h')],
+          ['Commande', val('produit')],
+          ['Quantité', val('quantite') || 'non précisée'],
+          ['Message', val('message') || 'aucun']
+        ];
+
+        // Récapitulatif affiché (construit avec textContent : aucun HTML injecté)
+        var recap = document.getElementById('recap');
+        recap.textContent = '';
+        lignes.forEach(function (l) {
+          var dt = document.createElement('dt'); dt.textContent = l[0];
+          var dd = document.createElement('dd'); dd.textContent = l[1];
+          recap.appendChild(dt); recap.appendChild(dd);
+        });
+
+        // Brouillon d'e-mail : s'ouvre uniquement si l'utilisateur clique sur le lien
+        var corps = 'Bonjour,\r\n\r\nJe souhaite faire la demande de réservation suivante :\r\n\r\n' +
+          lignes.map(function (l) { return l[0] + ' : ' + l[1]; }).join('\r\n') +
+          '\r\n\r\nMerci de me confirmer la disponibilité.';
+        document.getElementById('lien-mailto').href = 'mailto:' + DESTINATAIRE +
+          '?subject=' + encodeURIComponent('Demande de réservation (démonstration)') +
+          '&body=' + encodeURIComponent(corps);
+
+        resultat.hidden = false;
+        resultat.focus();
+        resultat.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+  </script>
+</body>
+</html>
